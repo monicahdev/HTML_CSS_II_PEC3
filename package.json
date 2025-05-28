@@ -1,8 +1,8 @@
 {
-  "name": "uoc-boilerplate",
-  "version": "3.11.0",
+  "name": "ecocircular",
+  "version": "1.0.0",
   "private": true,
-  "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "description": "Website based on UOC-Boilerplate using Tailwind",
   "scripts": {
     "parcel:serve": "parcel -p 8123 --target web --open",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
@@ -23,17 +23,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
+    "url": "https://github.com/monicahdev/HTML_CSS_II_PEC3"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Mónica Hernández"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
-  },
-  "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
+  "homepage": "https://github.com/monicahdev/HTML_CSS_II_PEC3",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
     "autoprefixer": "^10.4.20",
