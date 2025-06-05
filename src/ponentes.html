@@ -4,116 +4,166 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-
+    <!--<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"> do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <title>Upcycling Week by Ecocircular 2025</title>
     <meta name="description"
         content="Conoce las jornadas de economía circular">
     <link rel="icon" type="images/png" sizes="32x32" href="./assets/images/social.png"> 
   </head>
   <body>
-    <include src="./views/header.html"></include> 
-    <div class="econtainer container-fluid">
-          
+        <header class="flex flex-wrap items-center justify-between p-8 mb-14 bg-[#a8e5a1] rounded-[5px] flex-col md:flex-row md:items-center">
+      <a href="index.html" class="block">
+        <picture>
+          <source srcset="./assets/images/circular.png?as=webp" type="image/webp">
+          <img src="./assets/images/circular.png" alt="Logo" width="100" height="100" class="block max-w-[100px] h-auto">
+        </picture>
+      </a>
+      <nav class="flex-grow">
+        <ul class="flex flex-col items-end w-full gap-4 md:flex-row md:justify-end md:w-auto md:gap-8">
+          <li class="text-[2.5rem] font-bold uppercase">
+            <a href="ponentes.html" class="font-second text-[#3749ea] no-underline transition-colors duration-300 hover:text-[#da77ab]">Conoce</a>
+          </li>
+          <li class="text-[2.5rem] font-bold uppercase">
+            <a href="articulo.html" class="font-second text-[#3749ea] no-underline transition-colors duration-300 hover:text-[#da77ab]">Aprende</a>
+          </li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <div class="econtainer">
+
+      
       <h1 class="econtainer__title">Ponentes y talleristas Upcycling Week 2025 - Edición moda</h1>
-      
       <p class="econtainer__text">Este año tendremos 9 eventos increíbles. Desde diversas disciplinas podemos aportar a que la economía circular de la moda sea una realidad.</p>
+      <section class="flex flex-wrap gap-10 mb-14 overflow-hidden">
+
+
+        <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker1.jpg?as=webp",
+        "image": "/src/assets/images/speaker2.jpg",
+        "alt": "Fotografía de una mujer que viste trozos de plástico a manera de vestido. Porta un guante de látex. Al fondo hay una cuerda de tender con vasos, cubrebocas y bolsas de plástico.",
+        "name": "Juana Martínez",
+        "role": "PhD en Polímeros y Biopolímeros",
+        "description": "La investigadora Martínez nos da una charla sobre plástico y su uso en la industria de la moda. Cómo usamos el plástico que ya existe en los productos que necesitamos."
+      }'>
+      </include>  
+            
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker2.jpg?as=webp",
+        "image": "/src/assets/images/speaker2.jpg",
+        "alt": "Retrato de un hombre trajeado. Porta gafas y muestra joyas en su muñeca, meñique e índice.",
+        "name": "Juan Pérez",
+        "role": "Diseñador de joyas",
+        "description": "Su marca Placir hace joyería contemporánea. Extrae la plata de radiografías que recolecta de los centros médicos de su ciudad. Conoce su proceso."
+      }'>
+      </include>
       
-      <section class="espeaker">
-        
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker1.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid"src="/src/assets/images/speaker1.jpg" alt="Fotografía de una mujer que viste trozos de plástico a manera de vestido. Porta un guante de látex. Al fondo hay una cuerda de tender con vasos, cubrebocas y bolsas de plástico.">
-          </picture>
-          
-          <h2 class="espeaker__title">Juana Martínez - PhD en Polímeros y Biopolímeros</h2>
-          <p class="espeaker__text">La investigadora Martínez nos da una charla sobre plástico y su uso en la industria de la moda. Cómo usamos el plástico que ya existe en los productos que necesitamos.</p>
-        </div>
-  
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker2.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker2.jpg" alt="Retrato de un hombre trajeado. Porta gafas y muestra joyas en su muñeca, meñique e índice.">
-          </picture>
-          
-          <h2 class="espeaker__title">Juan Pérez - Diseñador de joyas</h2>
-          <p class="espeaker__text">Su marca Placir hace joyería contemporánea. Extrae la plata de radiografías que recolecta de los centros médicos de su ciudad. Conoce su proceso.</p>
-        </div>
-  
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker3.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker3.jpg" alt="Retrato de una mujer sonriente con un vestido veraniego, pendientes naranjas.">
-          </picture>
-          
-          <h2 class="espeaker__title"> Gaia González - Coleccionista de moda</h2>
-          <p class="espeaker__text">Lo vintage aporta a la moda circular. Cómo el consumo responsable mediante la comercialización de prendas de segunda mano.</p>
-        </div>
-  
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker4.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker4.jpg" alt="Hombre mayor cose una pieza de piel a máquina.">
-          </picture>
-          
-          <h2 class="espeaker__title">José Ramírez - Experto peletero </h2>
-          <p class="espeaker__text">La piel de curtido al vegetal como material sostenible. Comprar la calidad de la experticia artesana reduce el hipeconsumo de la moda rápida. Trae el abrigo de invierno de tu abuela y transfórmalo en algo que usarás por décadas.</p>
-        </div>
-  
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker5.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker5.jpg" alt="Dos hombres y dos mujeres sentados sobre un escritorio de oficina. Tienen en su mano móviles, tazas de café y carpetas y agendas.">
-          </picture>
-          
-          <h2 class="espeaker__title">O - Colectivo de diseño </h2>
-          <p class="espeaker__text">¡Transforma tus vaqueros en una totebag que usarás para todo!</p>
-        </div>
-  
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker6.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker6.jpg" alt="Retrato de una mujer que viste una camisa colorida y usa gafas.">
-          </picture>
-          
-          <h2 class="espeaker__title">María Duarte - Experta en cadena de producción</h2>
-          <p class="espeaker__text">Si eres emprendedor en la industria de la moda, aprende a identificar oportunidades.</p>
-        </div>
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker3.jpg?as=webp",
+        "image": "/src/assets/images/speaker3.jpg",
+        "alt": "Retrato de una mujer sonriente con un vestido veraniego, pendientes naranjas.",
+        "name": "Gaia González",
+        "role": "Coleccionista de moda",
+        "description": "Lo vintage aporta a la moda circular. Cómo el consumo responsable mediante la comercialización de prendas de segunda mano."
+      }'>
+      </include>
 
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker7.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker7.jpg" alt="Retrato de una mujer sonriente. Sostiene un cuaderno.">
-          </picture>
-          
-          <h2 class="espeaker__title">Anne Smith - Fundadora de Upcycling.es</h2>
-          <p class="espeaker__text">Conoce la historia de Upcycling.es: empezó con la venta de ropa usada por redes sociales y creció hasta ser el unicornio español de moda sostenible.</p>
-        </div>
-        
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker8.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker8.jpg" alt="Retrato de una mujer sonriente. Viste una camisa con un patrón geométrico.">
-          </picture>
-          
-          <h2 class="espeaker__title">Laura Rueda - Ingeniera en Tecnología y Diseño Textil</h2>
-          <p class="espeaker__text">Aprende con Laura a diferenciar los textiles, su composición y su ciclo de vida.</p>
-        </div>
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker4.jpg?as=webp",
+        "image": "/src/assets/images/speaker4.jpg",
+        "alt": "Hombre mayor cose una pieza de piel a máquina.",
+        "name": "José Ramírez",
+        "role": "Experto peletero",
+        "description": "La piel de curtido al vegetal como material sostenible. Comprar la calidad de la experticia artesana reduce el hipeconsumo de la moda rápida. Trae el abrigo de invierno de tu abuela y transfórmalo en algo que usarás por décadas."
+      }'>
+      </include>
 
-        <div class="espeaker__card">
-          <picture>
-            <source srcset="./assets/images/speaker9.jpg?as=webp" type="image/webp">
-            <img class="espeaker__img img-fluid" src="/src/assets/images/speaker9.jpg" alt="Retrato de una mujer. Viste gafas de sol, un gorro de lana y un suéter.">
-          </picture>
-          
-          <h2 class="espeaker__title">Daniela Gutiérrez - Tejedora</h2>
-          <p class="espeaker__text">Conoce el proyecto de Daniela: rescata 100 kilos de lana al año de las granjas ovejeras españolas y las transforma en prendas sostenibles promoviendo a su vez la economía circular.</p>
-        </div>
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker5.jpg?as=webp",
+        "image": "/src/assets/images/speaker5.jpg",
+        "alt": "Dos hombres y dos mujeres sentados sobre un escritorio de oficina. Tienen en su mano móviles, tazas de café y carpetas y agendas.",
+        "name": "O",
+        "role": "Colectivo de diseño",
+        "description": "¡Transforma tus vaqueros en una totebag que usarás para todo!"
+      }'>
+      </include>
+
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker6.jpg?as=webp",
+        "image": "/src/assets/images/speaker6.jpg",
+        "alt": "Retrato de una mujer que viste una camisa colorida y usa gafas.",
+        "name": "María Duarte",
+        "role": "Experta en cadena de producción",
+        "description": "Si eres emprendedor en la industria de la moda, aprende a identificar oportunidades."
+      }'>
+      </include>
+      
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker7.jpg?as=webp",
+        "image": "/src/assets/images/speaker7.jpg",
+        "alt": "Retrato de una mujer sonriente. Sostiene un cuaderno.",
+        "name": "Anne Smith",
+        "role": "Fundadora de Upcycling.es",
+        "description": "Conoce la historia de Upcycling.es: empezó con la venta de ropa usada por redes sociales y creció hasta ser el unicornio español de moda sostenible."
+      }'>
+      </include>
+
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker8.jpg?as=webp",
+        "image": "/src/assets/images/speaker8.jpg",
+        "alt": "Retrato de una mujer sonriente. Viste una camisa con un patrón geométrico.",
+        "name": "Laura Rueda",
+        "role": "Ingeniera en Tecnología y Diseño Textil",
+        "description": "Aprende con Laura a diferenciar los textiles, su composición y su ciclo de vida."
+      }'>
+      </include>
+        
+      <include src="./views/card.html" locals='{
+        "imageWebp": "./assets/images/speaker9.jpg?as=webp",
+        "image": "/src/assets/images/speaker9.jpg",
+        "alt": "Retrato de una mujer. Viste gafas de sol, un gorro de lana y un suéter.",
+        "name": "Daniela Gutiérrez",
+        "role": "Tejedora",
+        "description": "Conoce el proyecto de Daniela: rescata 100 kilos de lana al año de las granjas ovejeras españolas y las transforma en prendas sostenibles promoviendo a su vez la economía circular."
+      }'>
+      </include>
+      
       </section>
 
     </div>
-    <include src="./views/footer.html"></include>
+ <footer class="bg-[#a8e5a1] text-center py-8 px-4">
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <picture>
+            <source srcset="./assets/images/circular.png?as=webp" type="image/webp">
+            <img class="mb-4 md:mb-0" src="./assets/images/circular.png" alt="Logo" width="100" height="100">
+        </picture>    
+          
+          <ul class="flex flex-wrap justify-center gap-4 text-2xl font-extrabold font-second uppercase">
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__link" href="index.html">INICIO</a></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__link"  href="ponentes.html" >Conoce</a></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__link"  href="articulo.html" >Aprende</a></li>
+          </ul>
+        </div>  
+      
+          <ul class="flex justify-center gap-8 text-2xl">
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__social-link" href="#" target="_blank"><i class="fa-brands fa-facebook"></i></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__social-link" href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__social-link" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></li>
+          </ul>
+      
+        <div class="flex flex-col items-center space-y-2 text-[#3749ea]"> 
+          <p class="font-main text-base">2025 &copy; Mónica Natalia Hernández Barrera</p>
+          <p class="font-main text-base">Página basada en <a class="text-[#3749ea] hover:text-[#da77ab] uppercase font-second underline" href="https://github.com/uoc-advanced-html-css/uoc-boilerplate" target="_blank">UOC Boilerplate</a></p>
+          <p class="font-main text-base">Para la asignatura Herramientas <abbr class="efooter__abbr" title="HyperText Markup Language">HTML</abbr> y <abbr class="efooter__abbr" title="Cascading Style Sheets">CSS</abbr> II.</p>
+          <p class="font-main text-base">Máster en Desarrollo de Sitios y Aplicaciones Web de la <abbr class="efooter__abbr" title="Universitat Oberta de Catalunya">UOC</abbr>.</p>
+        </div>
+      </div>
+  </footer>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>

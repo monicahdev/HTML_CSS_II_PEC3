@@ -1,37 +1,238 @@
 <!DOCTYPE html>
-
 <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <!--<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"> do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Outfit&display=swap" rel="stylesheet">
 
     <title>Upcycling Week by Ecocircular 2025</title>
     <meta name="description"
         content="Conoce las jornadas de economía circular">
     <link rel="icon" type="images/png" sizes="32x32" href="./assets/images/social.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   </head>
-  <body class="bg-green-50 text-gray-800">
-    <include src="./views/header.html"></include>
+  <body>
+    <header class="flex flex-wrap items-center justify-between p-8 mb-14 bg-[#a8e5a1] rounded-[5px] flex-col md:flex-row md:items-center">
+      <a href="index.html" class="block">
+        <picture>
+          <source srcset="./assets/images/circular.png?as=webp" type="image/webp">
+          <img src="./assets/images/circular.png" alt="Logo" width="100" height="100" class="block max-w-[100px] h-auto">
+        </picture>
+      </a>
+      <nav class="flex-grow">
+        <ul class="flex flex-col items-end w-full gap-4 md:flex-row md:justify-end md:w-auto md:gap-8">
+          <li class="text-[2.5rem] font-extrabold uppercase">
+            <a href="ponentes.html" class="font-second text-[#3749ea] no-underline transition-colors duration-300 hover:text-[#da77ab]">Conoce</a>
+          </li>
+          <li class="text-[2.5rem] font-extrabold uppercase">
+            <a href="articulo.html" class="font-second text-[#3749ea] no-underline transition-colors duration-300 hover:text-[#da77ab]">Aprende</a>
+          </li>
 
-    <!--<include src="./views/component.html"></include>-->
+        </ul>
+      </nav>
+    </header>
 
-    <div class="max-w-xl mx-auto p-4 space-y-3">
-      <a class="block text-green-600 hover:text-green-800 font-semibold" href="aigenerated.html">
-        Ejercicio página generada con IA
-      </a>
-      <a class="block text-green-600 hover:text-green-800 font-semibold" href="articulo.html">
-        Programa de Actividades
-      </a>
-      <a class="block text-green-600 hover:text-green-800 font-semibold" href="ponentes.html">
-        Ponentes Invitados
-      </a>
-      <a class="block text-green-600 hover:text-green-800 font-semibold" href="formulario.html">
-        Contacto y Registro
-      </a>
+    <div class="econtainer">
       
+      <h1 class="econtainer__title">Upcycling Week by Ecocircular</h1>
+      <p class="econtainer__text">Upcycling Week 2025 - Edición Moda. Visítanos del 29 al 31 de julio en el Centro de Convenciones.</p>
+      <section class="ehome__section">
+      <a class="ehome__card" href="articulo.html">Moda circular</a>
+      <a class="ehome__card" href="ponentes.html">Panel de ponentes</a>
+      <a class="ehome__card" href="aigenerated.html" target="_blank">Ejercicio página generada con IA</a>
+    </section>
     </div>
-    <include src="./views/footer.html"></include>
+
+    <section class="econtainer" id="attributions">
+        <h2 class="econtainer__title">Enlaces</h2>
+        <p class="econtainer__text">En esta página encuentras todos los enlaces a los recursos utilizados para la creación de este sitio web. Algunos de estos recursos tienen que ser atribuidos. Se ha hecho la atribución* tal cual se especifica en cada caso (en los que aplique).</p>
+        <div class="eattributions__table-wrapper">
+        <table class="eattributions__table">
+          <caption class="eattributions__table-caption">Documentación de los recursos utilizados</caption>  
+          <thead class="eattributions__table-head">
+            <tr class="eattributions__table-row">
+              <th class="eattributions__table-cell" scope="col">Tipo de recurso</th>
+              <th class="eattributions__table-cell" scope="col">Descripción</th>
+              <th class="eattributions__table-cell" scope="col">Utilizada en</th>
+              <th class="eattributions__table-cell" scope="col">Autor</th>
+              <th class="eattributions__table-cell" scope="col">Atribución*</th>
+              <th class="eattributions__table-cell" scope="col">Enlace</th>
+            </tr>
+          </thead>
+          <tbody class="eattributions__table-body">  
+            <include src="./views/attribution.html" locals='{
+                "type": "Ícono",
+                "description": "Fav icon",
+                "usedIn": "Todo el sitio web",
+                "author": "<a class=\"eattributions__table-link\" href=\"https://www.flaticon.es/\">Flaticon - Freepik</a>",
+                "attribution": "<a class=\"eattributions__table-link\" href=\"https://www.flaticon.es/iconos-gratis/economia-circular\" title=\"economía circular iconos\">Economía circular iconos creados por nangicon - Flaticon</a>",
+                "link": "<a class=\"eattributions__table-link\" href=\"https://www.flaticon.es/icono-gratis/social_11164260\" target=\"_blank\">https://www.flaticon.es/icono-gratis/social_11164260</a>"
+                }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Logo",
+              "description": "Logo del encabezado y pie de página",
+              "usedIn": "Todo el sitio web",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.flaticon.es/\">Flaticon - Freepik</a>",
+              "attribution": "<a class=\"eattributions__table-link\" href=\"https://www.flaticon.es/iconos-gratis/economia-circular\" title=\"economía circular iconos\">Economía circular iconos creados por Flat Icons - Flaticon</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.flaticon.es/icono-gratis/economia-circular_3966998\" target=\"_blank\">https://www.flaticon.es/icono-gratis/economia-circular_3966998</a>"
+              }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de mujer con prendas de plástico",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@mart-production/\">MART PRODUCTION</a> (2021)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/mujer-reciclaje-contaminacion-concepto-7767680/\" target=\"_blank\">https://www.pexels.com/es-es/foto/mujer-reciclaje-contaminacion-concepto-7767680/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de hombre con joyas",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@mahdi-chaghari-9996334/\">mahdi chaghari</a> (2023)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/retrato-masculino-elegante-en-moda-formal-31824668/\" target=\"_blank\">https://www.pexels.com/es-es/foto/retrato-masculino-elegante-en-moda-formal-31824668/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de mujer sonriente",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@shvets-production/\">SHVETS production</a> (2021)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/soleado-mujer-retrato-sonriente-8417220/\" target=\"_blank\">https://www.pexels.com/es-es/foto/soleado-mujer-retrato-sonriente-8417220/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de hombre con máquina de coser",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@olly/\">Andrea Piacquadio</a> (2020)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/foto-de-hombre-cosiendo-3814539/\" target=\"_blank\">https://www.pexels.com/es-es/foto/foto-de-hombre-cosiendo-3814539/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de grupo de personas",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@mart-production/\">MART PRODUCTION</a> (2021)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/hombre-persona-gente-mujer-7550397/\" target=\"_blank\">https://www.pexels.com/es-es/foto/hombre-persona-gente-mujer-7550397/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de mujer con gafas",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@godisable-jacob-226636/\">Godisable Jacob</a> (2018)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/foto-de-mujer-vestida-con-top-floral-amarillo-871495/\" target=\"_blank\">https://www.pexels.com/es-es/foto/foto-de-mujer-vestida-con-top-floral-amarillo-871495/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de mujer con libreta",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@moose-photos-170195/\">Moose Photos</a> (2018)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/mujer-sonriente-vistiendo-sueter-negro-1587009/\" target=\"_blank\">https://www.pexels.com/es-es/foto/mujer-sonriente-vistiendo-sueter-negro-1587009/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de mujer sonriente",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@olly/\">Andrea Piacquadio</a> (2018)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/mujer-en-camisa-con-cuello-774909/\" target=\"_blank\">https://www.pexels.com/es-es/foto/mujer-en-camisa-con-cuello-774909/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+              "type": "Fotografía",
+              "description": "Fotografía de mujer con gorro",
+              "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"ponentes.html\">ponentes</a>",
+              "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@alipazani/\">Ali Pazani</a> (2019)",
+              "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+              "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/una-mujer-posando-con-la-mano-debajo-de-la-barbilla-2887718/\" target=\"_blank\">https://www.pexels.com/es-es/foto/una-mujer-posando-con-la-mano-debajo-de-la-barbilla-2887718/</a>"
+            }'>
+            </include>
+
+            <include src="./views/attribution.html" locals='{
+                "type": "Fotografía",
+                "description": "Fotografía de hombre con prendas de plástico",
+                "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"#.html\">artículo</a>",
+                "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@mart-production/\">MART PRODUCTION</a> (2021)",
+                "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+                "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/manos-sujetando-contaminacion-plastico-7767803/\" target=\"_blank\">https://www.pexels.com/es-es/foto/manos-sujetando-contaminacion-plastico-7767803/</a>"
+              }'>
+              </include>
+
+              <include src="./views/attribution.html" locals='{
+                "type": "Fotografía",
+                "description": "Fotografía de hombre con prendas de plástico",
+                "usedIn": "Página de <a class=\"eattributions__table-link\" href=\"#.html\">artículo</a>",
+                "author": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/@mart-production/\">MART PRODUCTION</a> (2021)",
+                "attribution": "Licencia de uso <a class=\"eattributions__table-link\" href=\"https://www.pexels.com/license/\">Uso gratuito</a>",
+                "link": "<a class=\"eattributions__table-link\" href=\"https://www.pexels.com/es-es/foto/hombre-de-chaqueta-amarilla-y-azul-de-pie-afuera-3392032/\" target=\"_blank\">https://www.pexels.com/es-es/foto/hombre-de-chaqueta-amarilla-y-azul-de-pie-afuera-3392032/</a>"
+              }'>
+              </include>
+            
+          </tbody>
+          <tfoot class="eattributions__table-foot ">
+            <tr class="eattributions__table-row">
+              <td class="eattributions__table-cell" colspan="7">*Las atribuciones son copiadas y pegadas textualmente como exigen los recursos que requieren licencia de atribución. El resto de imágenes y recursos tienen una licencia de uso Creative Commons, de uso gratuito o MIT.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    </div>
+    
+    <footer class="bg-[#a8e5a1] text-center py-8 px-4">
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <picture>
+            <source srcset="./assets/images/circular.png?as=webp" type="image/webp">
+            <img class="mb-4 md:mb-0" src="./assets/images/circular.png" alt="Logo" width="100" height="100">
+        </picture>    
+          
+          <ul class="flex flex-wrap justify-center gap-4 text-2xl font-extrabold font-second uppercase">
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__link" href="index.html">INICIO</a></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__link"  href="ponentes.html" >Conoce</a></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__link"  href="articulo.html" >Aprende</a></li>
+          </ul>
+        </div>  
+      
+          <ul class="flex justify-center gap-8 text-2xl">
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__social-link" href="#" target="_blank"><i class="fa-brands fa-facebook"></i></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__social-link" href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></li>
+            <li class="text-[#3749ea] hover:text-[#da77ab] transition-colors"><a class="efooter__social-link" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></li>
+          </ul>
+      
+        <div class="flex flex-col items-center space-y-2 text-[#3749ea]"> 
+          <p class="font-main text-base">2025 &copy; Mónica Natalia Hernández Barrera</p>
+          <p class="font-main text-base">Página basada en <a class="text-[#3749ea] hover:text-[#da77ab] uppercase font-second underline" href="https://github.com/uoc-advanced-html-css/uoc-boilerplate" target="_blank">UOC Boilerplate</a></p>
+          <p class="font-main text-base">Para la asignatura Herramientas <abbr class="efooter__abbr" title="HyperText Markup Language">HTML</abbr> y <abbr class="efooter__abbr" title="Cascading Style Sheets">CSS</abbr> II.</p>
+          <p class="font-main text-base">Máster en Desarrollo de Sitios y Aplicaciones Web de la <abbr class="efooter__abbr" title="Universitat Oberta de Catalunya">UOC</abbr>.</p>
+        </div>
+      </div>
+  </footer>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
