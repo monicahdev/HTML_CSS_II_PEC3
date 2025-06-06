@@ -14,7 +14,7 @@
   body {
     @apply p-0 m-0 font-main leading-[1.5] bg-second;
   }
-}
+} 
 
 @layer components {
   /*Container*/
@@ -36,8 +36,8 @@
   }
 
   .ehome__card {
-    @apply block text-center font-second text-xl font-extrabold text-dark 
-           bg-main p-lg rounded-2xl shadow-md border-2 border-dark 
+    @apply block text-center font-main text-2xl font-bold text-dark 
+           bg-main p-lg rounded-2xl shadow-md border-2 border-accent 
            transition duration-300 transform hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01];
   }
 
@@ -105,7 +105,7 @@
     @apply font-main bg-main leading-relaxed space-y-6 shadow-md pb-8 mb-10;
 
     > *:not(picture) {
-      @apply px-1;
+      @apply px-0.5;
     }
 
     .earticle__title {
